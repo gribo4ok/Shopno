@@ -1,0 +1,42 @@
+.services{
+	display: block;
+	width: 100%;
+	padding-top: 50px;
+	.titel__services{
+		width: 100%;
+		text-align: center;
+		margin: 25px 0;
+		text-transform: uppercase;
+		.services__titel{
+			@include blocktitel;
+		}
+		.subtitel{
+			font-family: $subtitel;
+			font-size: 14px;
+			color: #5e5f5f;
+			line-height: 30px;
+		}
+	}
+	.services__flex{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+		.services__item{
+			margin-bottom: 15px;
+			img{
+				position: relative;
+				&::before{
+					content: '';
+					position: absolute;
+					display: block;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+
+					background-color: rgba($color: #000000, $alpha: 0.5);
+				}
+			}
+		}
+	}
+}
